@@ -6,25 +6,24 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
   const [size, setSize] = useState("");
 
-  const fetchProductData = async () => {
-    products.map((item) => {
-      if (item._id === productId) {
-        setProductData(item);
-        console.log(productData);
-        setImage(item.images[0]);
-        return null;
+  const fetchProductData = () => {
+    const foundProduct = products.find((item) => item._id === productId);
+    if (foundProduct) {
+      setProductData(foundProduct);
+      if (foundProduct.images && foundProduct.images.length > 0) {
+        setImage(foundProduct.images[0]);
       }
-    });
+    }
   };
 
   useEffect(() => {
     fetchProductData();
-  }, [productId]);
+  }, [productId, products]);
 
   return productData ? (
     <div className=" border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
@@ -44,7 +43,7 @@ const Product = () => {
             ))}
           </div>
           <div className="w-full sm:w-[80%] ">
-            <img src={image} alt="" className="w-full h-auto" />
+          {image && <img src={image} alt="Product Image" className="w-full h-auto" />}
           </div>
         </div>
 
@@ -82,7 +81,7 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">
+          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">
             ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />
