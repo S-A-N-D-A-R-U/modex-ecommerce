@@ -36,7 +36,7 @@ try {
     res.json({success: true, message: 'Product created successfully'})
 
 } catch (error) {
-    consol.log(error)
+    console.log(error)
     res.json({success: false, message: error.message})
 }
 }
