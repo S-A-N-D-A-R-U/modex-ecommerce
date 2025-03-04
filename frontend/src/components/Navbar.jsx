@@ -25,24 +25,24 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <Link to="/">
-        <img src={assets.logo} alt="" className="w-36" />
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-accent to-violet-600 bg-clip-text text-transparent cursor-pointer"> MODEX</h1>
       </Link>
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           HOME
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          <hr className="w-2/4 border-none h-[3px] bg-accent hidden" />
         </NavLink>
         <NavLink to="/collection" className="flex flex-col items-center gap-1">
           COLLECTION
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          <hr className="w-2/4 border-none h-[3px] bg-accent hidden" />
         </NavLink>
         <NavLink to="/about" className="flex flex-col items-center gap-1">
           ABOUT
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          <hr className="w-2/4 border-none h-[3px] bg-accent hidden" />
         </NavLink>
         <NavLink to="/contact" className="flex flex-col items-center gap-1">
           CONTACT
-          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+          <hr className="w-2/4 border-none h-[3px] bg-accent hidden" />
         </NavLink>
       </ul>
 

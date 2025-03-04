@@ -1,20 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&display=swap');
 
 @import "tailwindcss";
+
+
+@theme {
+    
+    /* Primary and Secondary Colors */
+    --color-accent: #6366f1;
+    --color-secondary: #f28d35;
+  
+    /* Analogous Colors */
+    --color-analogous-1: #6a44f2;
+    --color-analogous-2: #1cbddd; 
+    --color-analogous-3: #4dca79 ;
+    --color-analogous-4: #faf8ff ;
+
+  
+  
+  }
 
 a.active hr{
     display: block;
 }
 
-*{
-    font-family: outfit;
-}
 
-.prata-regular {
-    font-family: "Prata", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+
+
 
 ::-webkit-scrollbar{
     display: none
@@ -22,7 +32,7 @@ a.active hr{
 
 @media  (max-width:640px) {
     a.active{
-        background-color: black;
+        background-color: #6366f1;
         color: white;
     }
 }
