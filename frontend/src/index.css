@@ -5,7 +5,7 @@
 @theme {
     
     /* Primary and Secondary Colors */
-    --color-accent: #6366f1;
+    --color-accent: #7345ea;
     --color-secondary: #f28d35;
   
     /* Analogous Colors */
@@ -32,7 +32,7 @@ a.active hr{
 
 @media  (max-width:640px) {
     a.active{
-        background-color: #6366f1;
+        background-color: #7345ea;
         color: white;
     }
 }

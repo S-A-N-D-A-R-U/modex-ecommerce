@@ -81,7 +81,7 @@ const Collection = () => {
         </p>
         {/**Category Filter */}
         <div
-          className={`border-gray-300 bg-pink-50 py-3 mt-6 ${
+          className={`border-gray-300 bg-accent/15 p-3 rounded-sm mt-6 ${
             showFilter ? "" : "hidden"
           } sm:block`}
         >
@@ -101,7 +101,7 @@ const Collection = () => {
 
         {/**SubCategory Filter */}
         <div
-          className={`border-gray-300 bg-pink-50 py-3  my-5 ${
+          className={`border-gray-300 bg-accent/15 p-3 rounded-sm my-5 ${
             showFilter ? "" : "hidden"
           } sm:block`}
         >
@@ -122,8 +122,8 @@ const Collection = () => {
 
       {/** Right Side */}
       <div className="flex-1">
-        <div className="felx justify-between text-base sm:text-2xl mb-4">
-          <Title text1={'ALL'} text2={"COLLECTION"} />
+        <div className="flex justify-between text-base sm:text-2xl mb-4">
+          <Title text1={'ALL'} text2={" COLLECTION"} />
           {/** Product Sort */}
           <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
             <option value="relavent">Sort by: Relavent</option>

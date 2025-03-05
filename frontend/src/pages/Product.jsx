@@ -28,7 +28,7 @@ const Product = () => {
   return productData ? (
     <div className=" border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
       {/** product data */}
-      <div className="flex  gap-12 sm:gap-12 flex-col sm:flex-row ">
+      <div className="flex  gap-7 sm:gap-12 flex-col sm:flex-row ">
         {/** Product Images */}
         <div className="felx-1 flex flex-col-reverse gap-3 sm:flex-row">
           <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[20%] w-full">
@@ -42,7 +42,7 @@ const Product = () => {
               />
             ))}
           </div>
-          <div className="w-full sm:w-[80%] ">
+          <div className="w-full sm:w-[60%] ">
           {image && <img src={image} alt="Product Image" className="w-full h-auto" />}
           </div>
         </div>
@@ -58,9 +58,9 @@ const Product = () => {
             <img src={assets.star_dull_icon} alt="" className="w-3 5" />
             <p className="pl-2">(122)</p>
           </div>
-          <p className="mt-5 text-3xl font-medium">
+          <p className="mt-5 text-3xl text-accent font-medium">
             {currency}
-            {productData.price}
+            {productData.price}.00
           </p>
           <p className="mt-5 text-gray-500 md:w-4/5">
             {productData.description}
@@ -72,8 +72,8 @@ const Product = () => {
                 <button
                   onClick={() => setSize(item)}
                   key={index}
-                  className={`border py-2 px-4 bg-gray-100 ${
-                    item === size ? "border-orange-500" : ""
+                  className={`border py-2 px-4 text-accent border-accent rounded-full ${
+                    item === size ? "bg-accent text-white" : ""
                   }`}
                 >
                   {item}
@@ -81,7 +81,7 @@ const Product = () => {
               ))}
             </div>
           </div>
-          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">
+          <button onClick={() => addToCart(productData._id, size)} className="bg-accent text-white px-8 py-4 rounded-full flex items-center space-x-2 hover:bg-accent/80 transition-all shadow-lg shadow-accent/25  duration-200 hover:scale-105 active:scale-95">
             ADD TO CART
           </button>
           <hr className="mt-8 sm:w-4/5" />
