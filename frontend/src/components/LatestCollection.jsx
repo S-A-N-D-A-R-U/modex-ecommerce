@@ -17,8 +17,7 @@ useEffect(() => {
       <div className="text-center py-8 text-3xl">
         <Title text1={"LATEST "} text2={"COLLECTION"} />
         <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et
-          libero nec nisl facilisis ultricies.
+        Explore our newest arrivals featuring cutting-edge designs
         </p>
       </div>
 
